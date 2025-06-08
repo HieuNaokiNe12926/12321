@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 <html lang="vi" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cổng Nạp Game Uy Tín</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- CSS Tùy Chỉnh -->
     <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #111827; }
-        select {
-            -webkit-appearance: none; -moz-appearance: none; appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E");
-            background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 1.5em 1.5em; padding-right: 2.5rem;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111827;
         }
-        .game-card { transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
-        .game-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2); }
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+        }
+
+        .game-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+        }
     </style>
 </head>
+
 <body class="text-gray-200">
 
     <!-- === HEADER === -->
     <header class="bg-gray-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="javascript:location.reload()" class="text-2xl font-bold text-white"><span class="text-emerald-400">Nạp </span>GameVN</a>
+            <a href="javascript:location.reload()" class="text-2xl font-bold text-white"><span class="text-emerald-400">My</span>Website</a>
             <nav class="hidden md:flex space-x-8">
                 <a href="#" id="home-link" class="hover:text-emerald-400 transition-colors">Trang Chủ</a>
                 <a href="#freefire" data-game="freefire" class="nav-game-link hover:text-emerald-400 transition-colors">Nạp Free Fire</a>
                 <a href="#roblox" data-game="roblox" class="nav-game-link hover:text-emerald-400 transition-colors">Nạp Roblox</a>
             </nav>
-            <div class="md:hidden"><button id="mobile-menu-button" class="text-white focus:outline-none"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-white focus:outline-none"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg></button></div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden"><nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
-            <a href="#" id="mobile-home-link" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Trang Chủ</a>
-            <a href="#freefire" data-game="freefire" class="nav-game-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Nạp Free Fire</a>
-            <a href="#roblox" data-game="roblox" class="nav-game-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Nạp Roblox</a>
-        </nav></div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#" id="mobile-home-link" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Trang Chủ</a>
+                <a href="#freefire" data-game="freefire" class="nav-game-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Nạp Free Fire</a>
+                <a href="#roblox" data-game="roblox" class="nav-game-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Nạp Roblox</a>
+            </nav>
+        </div>
     </header>
 
     <!-- === MAIN CONTENT === -->
@@ -55,169 +77,181 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div data-game="freefire" class="game-card cursor-pointer bg-gray-800 rounded-xl overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-700/50 flex items-center justify-center p-4"><img src="https://play-lh.googleusercontent.com/sKh_B4ZLfu0jzqx9z98b2APe2rxDb8dIW-QqFHyS3cpzDK2Qq8tAbRAz3rXzOFtdAw=w240-h480-rw" alt="Logo Free Fire" class="h-24 w-24 object-contain rounded-lg"></div>
-                    <div class="p-6"><h3 class="text-2xl font-bold text-white">Free Fire</h3><p class="text-gray-400 mt-2">Nạp Kim Cương nhanh chóng và an toàn</p></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white">Free Fire</h3>
+                        <p class="text-gray-400 mt-2">Nạp Kim Cương nhanh chóng và an toàn</p>
+                    </div>
                 </div>
                 <div data-game="roblox" class="game-card cursor-pointer bg-gray-800 rounded-xl overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-700/50 flex items-center justify-center p-4"><img src="https://cdn6.aptoide.com/imgs/2/6/6/2662a7b575bd8e029dc16130c1bc32c3_icon.jpg" alt="Logo Roblox" class="h-24 w-24 object-contain rounded-lg"></div>
-                    <div class="p-6"><h3 class="text-2xl font-bold text-white">Roblox</h3><p class="text-gray-400 mt-2">Nạp Robux giá rẻ, nhận ngay tức thì</p></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white">Roblox</h3>
+                        <p class="text-gray-400 mt-2">Nạp Robux giá rẻ, nhận ngay tức thì</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === MỤC LIÊN HỆ MỚI === -->
+        <section id="contact-section" class="mt-20 py-16 bg-gray-900/50 rounded-xl">
+            <div class="max-w-4xl mx-auto text-center px-6">
+                <h2 class="text-3xl font-bold text-white">Cần Hỗ Trợ?</h2>
+                <p class="mt-4 text-lg text-gray-400">Nếu bạn gặp bất kỳ vấn đề nào trong quá trình nạp thẻ hoặc có câu hỏi, đừng ngần ngại liên hệ với chúng tôi qua Discord.</p>
+                <div class="mt-8">
+                    <a href="https://discord.com/users/1354705773644742760" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-3 bg-indigo-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <!-- Discord Icon SVG -->
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.317 4.36981C18.879 3.69381 17.352 3.22881 15.764 3.01881C15.704 3.17881 15.626 3.36681 15.574 3.55181C14.126 3.22881 12.684 3.01881 11.223 3.01881C9.762 3.01881 8.32 3.22881 6.872 3.55181C6.82 3.36681 6.742 3.17881 6.682 3.01881C5.094 3.22881 3.568 3.69381 2.129 4.36981C0.259 7.64481 -0.3 10.9728 0.096 14.2498C1.692 15.5998 3.422 16.5868 5.26 17.2628C5.532 16.9208 5.772 16.5598 5.976 16.1818C5.568 15.9898 5.178 15.7708 4.808 15.5348C4.942 15.4438 5.072 15.3488 5.198 15.2508C8.344 16.7028 11.666 16.9668 14.942 16.2998C15.312 16.6978 15.654 17.0788 15.968 17.4398C16.19 17.3458 16.406 17.2458 16.616 17.1398C18.272 16.4588 19.832 15.5458 21.222 14.2498C21.842 10.4558 21.28 6.91881 20.317 4.36981ZM8.02 12.3118C7.024 12.3118 6.222 11.5218 6.222 10.5398C6.222 9.55781 7.01 8.76781 8.02 8.76781C9.03 8.76781 9.822 9.55781 9.822 10.5398C9.822 11.5218 9.03 12.3118 8.02 12.3118ZM14.434 12.3118C13.438 12.3118 12.636 11.5218 12.636 10.5398C12.636 9.55781 13.424 8.76781 14.434 8.76781C15.444 8.76781 16.236 9.55781 16.236 10.5398C16.236 11.5218 15.444 12.3118 14.434 12.3118Z"></path>
+                        </svg>
+                        Liên hệ qua Discord
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- === KHU VỰC CHỨA CÁC FORM NẠP THẺ (ẨN MẶC ĐỊNH) === -->
         <div id="topup-forms-container" class="hidden">
-            <button id="back-to-selection-btn" class="mb-8 inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                Quay lại chọn game
-            </button>
-
-            <!-- FORM NẠP FREE FIRE -->
+            <!-- Form nạp thẻ và khung ảnh... -->
+            <button id="back-to-selection-btn" class="mb-8 inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>Quay lại chọn game</button>
             <section id="freefire-section" class="hidden">
                 <div class="max-w-xl mx-auto bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl">
                     <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 text-white"><span class="text-emerald-400">Nạp Kim Cương</span> Free Fire</h2>
                     <form id="freefire-purchase-form" class="space-y-6" novalidate>
-                        <!-- Form fields... -->
                         <div><label for="ff-game-id" class="block text-base sm:text-lg font-medium mb-2">1. ID Game Free Fire:</label><input type="text" id="ff-game-id" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 transition" placeholder="Nhập ID trong game..."></div>
-                        <div><label for="ff-diamond-package" class="block text-base sm:text-lg font-medium mb-2">2. Chọn Gói Kim Cương:</label><select id="ff-diamond-package" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 transition"><option value="" selected disabled>--- Vui lòng chọn một gói ---</option><option value="Gói 2.650 Kim Cương">50.000 ₫ - Kim Cương × 2.650</option><option value="Gói 3.010 Kim Cương">100.000 ₫ - Kim Cương × 3.010</option><option value="Gói 8.010 Kim Cương">200.000 ₫ - Kim Cương × 8.010</option></select></div>
-                        <div class="pt-2 text-center"><p id="ff-error-message" class="text-red-400 font-medium hidden"></p></div>
+                        <div><label for="ff-diamond-package" class="block text-base sm:text-lg font-medium mb-2">2. Chọn Gói Kim Cương:</label><select id="ff-diamond-package" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 transition">
+                                <option value="" selected disabled>--- Vui lòng chọn một gói ---</option>
+                                <option value="Gói 2.650 Kim Cương">50.000 ₫ - Kim Cương × 2.650</option>
+                                <option value="Gói 3.010 Kim Cương">100.000 ₫ - Kim Cương × 3.010</option>
+                                <option value="Gói 8.010 Kim Cương">200.000 ₫ - Kim Cương × 8.010</option>
+                            </select></div>
+                        <div class="pt-2 text-center">
+                            <p id="ff-error-message" class="text-red-400 font-medium hidden"></p>
+                        </div>
                         <div class="text-center pt-4"><button type="submit" class="w-full sm:w-auto bg-emerald-600 text-white font-bold text-lg px-12 py-4 rounded-lg hover:bg-emerald-700 transition-all transform hover:scale-105 shadow-lg">Xác Nhận</button></div>
                     </form>
                 </div>
-                <!-- === KHUNG ẢNH MỚI CHO FREE FIRE === -->
                 <div class="max-w-xl mx-auto mt-8 bg-gray-800 p-4 sm:p-6 rounded-xl shadow-2xl">
-                    <h3 class="text-xl font-semibold text-white mb-4 text-center">Hình Ảnh</h3>
-                    <img src="https://i.ibb.co/sJWwZXx5/88cda1dd-0ab8-40cc-93b6-deeb810419db.jpg" alt="Hình Ảnh qua mã QR" class="w-full h-auto rounded-lg">
+                    <h3 class="text-xl font-semibold text-white mb-4 text-center">Hình Ảnh</h3><img src="https://i.ibb.co/sJWwZXx5/88cda1dd-0ab8-40cc-93b6-deeb810419db.jpg" alt="Hình Ảnh qua mã QR" class="w-full h-auto rounded-lg">
                 </div>
             </section>
-
-            <!-- FORM NẠP ROBLOX -->
             <section id="roblox-section" class="hidden">
                 <div class="max-w-xl mx-auto bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl">
                     <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 text-white"><span class="text-emerald-400">Nạp Robux</span> Roblox</h2>
                     <form id="roblox-purchase-form" class="space-y-6" novalidate>
-                        <!-- Form fields... -->
                         <div><label for="roblox-username" class="block text-base sm:text-lg font-medium mb-2">1. Tên Người Dùng Roblox (Username):</label><input type="text" id="roblox-username" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 transition" placeholder="Nhập Username trong Roblox..."></div>
-                        <div><label for="roblox-robux-package" class="block text-base sm:text-lg font-medium mb-2">2. Chọn Gói Robux:</label><select id="roblox-robux-package" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 transition"><option value="" selected disabled>--- Vui lòng chọn một gói ---</option><option value="Gói 1,000 Robux">50.000 ₫ - 1,000 Robux</option><option value="Gói 2,250 Robux">100.000 ₫ - 2,250 Robux</option><option value="Gói 4,500 Robux">200.000 ₫ - 4,500 Robux</option><option value="Gói 12,500 Robux">500.000 ₫ - 12,500 Robux</option></select></div>
-                        <div class="pt-2 text-center"><p id="roblox-error-message" class="text-red-400 font-medium hidden"></p></div>
+                        <div><label for="roblox-robux-package" class="block text-base sm:text-lg font-medium mb-2">2. Chọn Gói Robux:</label><select id="roblox-robux-package" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 transition">
+                                <option value="" selected disabled>--- Vui lòng chọn một gói ---</option>
+                                <option value="Gói 1,000 Robux">50.000 ₫ - 1,000 Robux</option>
+                                <option value="Gói 2,250 Robux">100.000 ₫ - 2,250 Robux</option>
+                                <option value="Gói 4,500 Robux">200.000 ₫ - 4,500 Robux</option>
+                                <option value="Gói 12,500 Robux">500.000 ₫ - 12,500 Robux</option>
+                            </select></div>
+                        <div class="pt-2 text-center">
+                            <p id="roblox-error-message" class="text-red-400 font-medium hidden"></p>
+                        </div>
                         <div class="text-center pt-4"><button type="submit" class="w-full sm:w-auto bg-emerald-600 text-white font-bold text-lg px-12 py-4 rounded-lg hover:bg-emerald-700 transition-all transform hover:scale-105 shadow-lg">Xác Nhận</button></div>
                     </form>
                 </div>
-                <!-- === KHUNG ẢNH MỚI CHO ROBLOX === -->
                 <div class="max-w-xl mx-auto mt-8 bg-gray-800 p-4 sm:p-6 rounded-xl shadow-2xl">
-                    <h3 class="text-xl font-semibold text-white mb-4 text-center">Hình Ảnh</h3>
-                    <img src="https://i.ibb.co/sJWwZXx5/88cda1dd-0ab8-40cc-93b6-deeb810419db.jpg" alt="Hình Ảnh qua mã QR" class="w-full h-auto rounded-lg">
+                    <h3 class="text-xl font-semibold text-white mb-4 text-center">Hình Ảnh</h3><img src="https://i.ibb.co/sJWwZXx5/88cda1dd-0ab8-40cc-93b6-deeb810419db.jpg" alt="Hình Ảnh qua mã QR" class="w-full h-auto rounded-lg">
                 </div>
             </section>
         </div>
     </main>
-    
-    <!-- === THÔNG BÁO THÀNH CÔNG (MODAL) === -->
+
+    <!-- MODAL -->
     <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
         <div class="bg-gray-800 p-8 rounded-xl shadow-2xl text-center max-w-sm mx-4 transform transition-all scale-95 opacity-0" id="modal-content">
-            <div class="mx-auto bg-emerald-500 rounded-full h-16 w-16 flex items-center justify-center mb-6"><svg class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div>
+            <div class="mx-auto bg-emerald-500 rounded-full h-16 w-16 flex items-center justify-center mb-6"><svg class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg></div>
             <h3 class="text-2xl font-bold text-white mb-3">Thành Công!</h3>
-            <p id="success-message" class="text-gray-300 mb-8"></p>
-            <button id="close-modal-btn" class="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition">Đóng</button>
+            <p id="success-message" class="text-gray-300 mb-8"></p><button id="close-modal-btn" class="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition">Đóng</button>
         </div>
     </div>
 
-    <!-- === JAVASCRIPT (Không cần thay đổi) === -->
+    <!-- JAVASCRIPT -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // ... Toàn bộ JavaScript giữ nguyên như cũ ...
-        const gameSelectionSection = document.getElementById('game-selection');
-        const topupFormsContainer = document.getElementById('topup-forms-container');
-        const freefireSection = document.getElementById('freefire-section');
-        const robloxSection = document.getElementById('roblox-section');
-        const gameCards = document.querySelectorAll('.game-card');
-        const navLinks = document.querySelectorAll('.nav-game-link');
-        const backToSelectionBtn = document.getElementById('back-to-selection-btn');
-        const homeLinks = [document.getElementById('home-link'), document.getElementById('mobile-home-link')];
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const freefireForm = document.getElementById('freefire-purchase-form');
-        const robloxForm = document.getElementById('roblox-purchase-form');
-        const successModal = document.getElementById('success-modal');
-        const modalContent = document.getElementById('modal-content');
-        const closeModalBtn = document.getElementById('close-modal-btn');
-        const successMessage = document.getElementById('success-message');
+        document.addEventListener('DOMContentLoaded', function() {
+            // ... Toàn bộ JavaScript giữ nguyên như cũ ...
+            const gameSelectionSection = document.getElementById("game-selection"),
+                topupFormsContainer = document.getElementById("topup-forms-container"),
+                freefireSection = document.getElementById("freefire-section"),
+                robloxSection = document.getElementById("roblox-section"),
+                gameCards = document.querySelectorAll(".game-card"),
+                navLinks = document.querySelectorAll(".nav-game-link"),
+                backToSelectionBtn = document.getElementById("back-to-selection-btn"),
+                homeLinks = [document.getElementById("home-link"), document.getElementById("mobile-home-link")],
+                mobileMenuButton = document.getElementById("mobile-menu-button"),
+                mobileMenu = document.getElementById("mobile-menu"),
+                freefireForm = document.getElementById("freefire-purchase-form"),
+                robloxForm = document.getElementById("roblox-purchase-form"),
+                successModal = document.getElementById("success-modal"),
+                modalContent = document.getElementById("modal-content"),
+                closeModalBtn = document.getElementById("close-modal-btn"),
+                successMessage = document.getElementById("success-message");
 
-        function showGameSelection() {
-            gameSelectionSection.classList.remove('hidden');
-            topupFormsContainer.classList.add('hidden');
-            window.scrollTo(0, 0);
-        }
-
-        function showTopupForm(gameName) {
-            gameSelectionSection.classList.add('hidden');
-            topupFormsContainer.classList.remove('hidden');
-            if (gameName === 'freefire') {
-                freefireSection.classList.remove('hidden');
-                robloxSection.classList.add('hidden');
-            } else if (gameName === 'roblox') {
-                robloxSection.classList.remove('hidden');
-                freefireSection.classList.add('hidden');
+            function showGameSelection() {
+                gameSelectionSection.classList.remove("hidden"), topupFormsContainer.classList.add("hidden"), window.scrollTo(0, 0)
             }
-            mobileMenu.classList.add('hidden');
-            window.scrollTo(0, 0);
-        }
 
-        gameCards.forEach(card => card.addEventListener('click', () => showTopupForm(card.dataset.game)));
-        navLinks.forEach(link => link.addEventListener('click', (e) => { e.preventDefault(); showTopupForm(link.dataset.game); }));
-        backToSelectionBtn.addEventListener('click', showGameSelection);
-        homeLinks.forEach(link => link.addEventListener('click', (e) => { e.preventDefault(); showGameSelection(); mobileMenu.classList.add('hidden'); }));
-        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            function showTopupForm(e) {
+                gameSelectionSection.classList.add("hidden"), topupFormsContainer.classList.remove("hidden"), "freefire" === e ? (freefireSection.classList.remove("hidden"), robloxSection.classList.add("hidden")) : "roblox" === e && (robloxSection.classList.remove("hidden"), freefireSection.classList.add("hidden")), mobileMenu.classList.add("hidden"), window.scrollTo(0, 0)
+            }
+            gameCards.forEach(e => {
+                e.addEventListener("click", () => {
+                    showTopupForm(e.dataset.game)
+                })
+            }), navLinks.forEach(e => {
+                e.addEventListener("click", t => {
+                    t.preventDefault(), showTopupForm(e.dataset.game)
+                })
+            }), backToSelectionBtn.addEventListener("click", showGameSelection), homeLinks.forEach(e => {
+                e.addEventListener("click", t => {
+                    t.preventDefault(), showGameSelection(), mobileMenu.classList.add("hidden")
+                })
+            }), mobileMenuButton.addEventListener("click", () => mobileMenu.classList.toggle("hidden")), freefireForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const t = document.getElementById("ff-game-id"),
+                    o = document.getElementById("ff-diamond-package"),
+                    n = document.getElementById("ff-error-message");
+                handleFormSubmit(t, o, n, "ID Game")
+            }), robloxForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const t = document.getElementById("roblox-username"),
+                    o = document.getElementById("roblox-robux-package"),
+                    n = document.getElementById("roblox-error-message");
+                handleFormSubmit(t, o, n, "Username")
+            });
 
-        freefireForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const idInput = document.getElementById('ff-game-id');
-            const packageSelect = document.getElementById('ff-diamond-package');
-            const errorMsg = document.getElementById('ff-error-message');
-            handleFormSubmit(idInput, packageSelect, errorMsg, 'ID Game');
+            function handleFormSubmit(e, t, o, n) {
+                o.classList.add("hidden");
+                const s = e.value.trim(),
+                    d = t.value;
+                if (!s) return o.textContent = `Vui lòng nhập ${n} của bạn!`, o.classList.remove("hidden"), void e.focus();
+                if (!d) return o.textContent = "Vui lòng chọn một gói nạp!", o.classList.remove("hidden"), void t.focus();
+                const i = t.options[t.selectedIndex].text;
+                showSuccessModal(`Nạp thành công gói "${i}" cho ${n}: ${s}.`)
+            }
+
+            function showSuccessModal(e) {
+                successMessage.textContent = e, successModal.classList.remove("hidden"), setTimeout(() => {
+                    modalContent.classList.remove("scale-95", "opacity-0"), modalContent.classList.add("scale-100", "opacity-100")
+                }, 10)
+            }
+
+            function closeModal() {
+                modalContent.classList.add("scale-95", "opacity-0"), setTimeout(() => {
+                    successModal.classList.add("hidden")
+                }, 200)
+            }
+            closeModalBtn.addEventListener("click", closeModal), successModal.addEventListener("click", e => {
+                e.target === successModal && closeModal()
+            });
         });
-
-        robloxForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const idInput = document.getElementById('roblox-username');
-            const packageSelect = document.getElementById('roblox-robux-package');
-            const errorMsg = document.getElementById('roblox-error-message');
-            handleFormSubmit(idInput, packageSelect, errorMsg, 'Username');
-        });
-
-        function handleFormSubmit(idInput, packageSelect, errorMsg, idType) {
-            errorMsg.classList.add('hidden');
-            const idValue = idInput.value.trim();
-            const selectedPackageValue = packageSelect.value;
-            if (!idValue) {
-                errorMsg.textContent = `Vui lòng nhập ${idType} của bạn!`;
-                errorMsg.classList.remove('hidden');
-                idInput.focus();
-                return;
-            }
-            if (!selectedPackageValue) {
-                errorMsg.textContent = 'Vui lòng chọn một gói nạp!';
-                errorMsg.classList.remove('hidden');
-                packageSelect.focus();
-                return;
-            }
-            const selectedPackageText = packageSelect.options[packageSelect.selectedIndex].text;
-            showSuccessModal(`Nạp thành công gói "${selectedPackageText}" cho ${idType}: ${idValue}.`);
-        }
-
-        function showSuccessModal(message) {
-            successMessage.textContent = message;
-            successModal.classList.remove('hidden');
-            setTimeout(() => { modalContent.classList.remove('scale-95', 'opacity-0'); modalContent.classList.add('scale-100', 'opacity-100'); }, 10);
-        }
-
-        function closeModal() {
-            modalContent.classList.add('scale-95', 'opacity-0');
-            setTimeout(() => { successModal.classList.add('hidden'); }, 200);
-        }
-
-        closeModalBtn.addEventListener('click', closeModal);
-        successModal.addEventListener('click', (event) => { if (event.target === successModal) closeModal(); });
-    });
     </script>
 </body>
+
 </html>
